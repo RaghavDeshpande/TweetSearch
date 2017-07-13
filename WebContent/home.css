@@ -1,0 +1,21 @@
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  height: 250px;
+}
+#twit-div{
+  color: #FFF;
+  text-shadow: 1px 0 0 black;
+  padding: 20px;
+  background: url('./images/twitter-logo-wallpaper.jpg') center / cover;
+}
+#outter-div{
+  margin :50px 50px 50px 50px;
+}
+.mdl-card__supporting-text{
+  padding: 10px;
+}
+.pink{
+  color: darkred;
+}

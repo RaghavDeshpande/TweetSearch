@@ -16,6 +16,8 @@ public class Home extends HttpServlet {
         
     }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println(request.getParameter("query"));
+		
 		Helper helper = (Helper) request.getSession().getAttribute("helper");
 		String url = request.getRequestURL().toString();
     	int index = url.lastIndexOf("/");
@@ -38,14 +40,14 @@ public class Home extends HttpServlet {
 				e.printStackTrace();
 			}
     	}
-    	else if(url.equalsIgnoreCase("/search")){
+    	/*else if(url.equalsIgnoreCase("/search")){
     		String query = request.getParameter("query");
     		request.getSession().setAttribute("query", query);
     		request.getRequestDispatcher("search.jsp").forward(request, response);
-    	}
+    	}*/
     	else if(url.equalsIgnoreCase("/getSearchResults")){
     		response.setContentType("application/json");
-    		String query = (String) request.getSession().getAttribute("query");
+    		String query = request.getParameter("query");
     		try {
     			response.getWriter().println(helper.getSearchResults(query));
 			} catch (Exception e) {

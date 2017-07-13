@@ -42,7 +42,7 @@ public class Authenticate extends HttpServlet {
     				String userName =request.getParameter("screen_name");
     				request.getSession().setAttribute("userName", userName);
 					if(helper.setAccessToken(request)){
-						URL = "home.jsp";
+						URL = "home.html";
 					}
     			}
 			} catch (Exception e) {

@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="Authenticate"><img alt="signInWithTwitter" src="./images/sign-in-with-twitter-gray.png"></a>
+<div align="center">
+	<a href="Authenticate"><img alt="signInWithTwitter" src="./images/sign-in-with-twitter-gray.png"></a>
+</div>
 </body>
 </html>
