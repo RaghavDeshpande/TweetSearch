@@ -25,8 +25,8 @@ public class Helper implements Closeable {
  public String oauth_verifier;
  
  static {
-	 _api_key = "h9Bu1NPuiuwFcC6kWsYplhT7j";
-	 _api_secret = "LvMpBLs02NTV4Re2Wa0UNzEAXiMEHeuOfWnTInHtVnoQn82mxt";
+	 _api_key = "api key here";
+	 _api_secret = "api secret key";
 }
 
  public Helper(String callbackURL){
