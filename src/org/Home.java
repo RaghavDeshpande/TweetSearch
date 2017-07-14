@@ -11,14 +11,13 @@ import support.Helper;
 
 public class Home extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
     public Home() {
         super();
-        
     }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(request.getParameter("query"));
-		
 		Helper helper = (Helper) request.getSession().getAttribute("helper");
+		if(helper == null) { request.getRequestDispatcher("error.html").forward(request, response); }
 		String url = request.getRequestURL().toString();
     	int index = url.lastIndexOf("/");
     	url = url.substring(index);
@@ -40,11 +39,6 @@ public class Home extends HttpServlet {
 				e.printStackTrace();
 			}
     	}
-    	/*else if(url.equalsIgnoreCase("/search")){
-    		String query = request.getParameter("query");
-    		request.getSession().setAttribute("query", query);
-    		request.getRequestDispatcher("search.jsp").forward(request, response);
-    	}*/
     	else if(url.equalsIgnoreCase("/getSearchResults")){
     		response.setContentType("application/json");
     		String query = request.getParameter("query");
@@ -55,6 +49,13 @@ public class Home extends HttpServlet {
 				e.printStackTrace();
 			}
     	}
+		else if(url.equalsIgnoreCase("/signout")){
+			helper.close();
+			response.getWriter().flush();
+			response.getWriter().close();
+			System.out.println("signout");
+			request.getRequestDispatcher("logout").forward(request, response);
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

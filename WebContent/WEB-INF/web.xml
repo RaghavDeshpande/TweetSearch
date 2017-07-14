@@ -36,4 +36,12 @@
   	<servlet-name>Home</servlet-name>
   	<url-pattern>/getSearchResults</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Home</servlet-name>
+  	<url-pattern>/signout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Authenticate</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
 </web-app>

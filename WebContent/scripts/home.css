@@ -1,0 +1,45 @@
+.demo-card-wide.mdl-card {
+width: 50%;
+}
+#twit-div{
+width: 100%;
+color: black;
+text-shadow: 1px 0 0 white;
+padding: 15px;
+height: 30%;
+}
+#outter-div{
+margin :50px 50px 50px 50px;
+}
+.mdl-card__supporting-text{
+padding: 10px;
+}
+.pink{
+color: darkred;
+}
+.mdl-progress{
+    margin: 200px;
+}
+header{
+    height: 20%;
+}
+.demo-card-wide > .mdl-card__title {
+    height: 250px;
+}
+.chip {
+display: inline-block;
+padding: 0 25px;
+height: 50px;
+font-size: 12px;
+line-height: 50px;
+border-radius: 25px;
+background-color: #f1f1f1;
+margin: 8px;
+}
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}

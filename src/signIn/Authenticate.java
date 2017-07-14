@@ -42,6 +42,7 @@ public class Authenticate extends HttpServlet {
     				String userName =request.getParameter("screen_name");
     				request.getSession().setAttribute("userName", userName);
 					if(helper.setAccessToken(request)){
+						request.getSession().setAttribute("helper", helper);
 						URL = "home.html";
 					}
     			}
@@ -49,11 +50,15 @@ public class Authenticate extends HttpServlet {
 				System.out.println(e.getMessage());
 			}
     	}
-    	
-    	else
+    	else if(url.equalsIgnoreCase("/logout")){
+    		System.out.println("logout");
+    		request.getSession().invalidate();
+    		URL="logout.html";
+    	}
+    	else{
     		URL = "error.jsp";
+    	}
     	if(URL != null){
-    		request.getSession().setAttribute("helper", helper);
     		RequestDispatcher rd = request.getRequestDispatcher(URL);
     		rd.forward(request, response);
     	}

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>home page</title>
 </head>
 <body>
 <div align="center">
@@ -12,3 +12,6 @@
 </div>
 </body>
 </html>
+<script>
+
+</script>
